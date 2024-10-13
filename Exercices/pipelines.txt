@@ -1,0 +1,13 @@
+  cd exo1/ann/
+  415  wc 2016/*.ann > comptes.txt
+  416  wc 2017/*.ann >> comptes.txt
+  417  wc 2018/*.ann >> comptes.txt
+
+  491* cat 2017/*.ann | egrep Location > wc 2017/*.ann > locations.txt
+  492  cat 2016/*.ann | egrep Location > wc 2016/*.ann >> locations.txt
+  493  cat 2018/*.ann | egrep Location > wc 2018/*.ann >> locations.txt
+
+  cd Exercices/
+  615  cat locations.txt | egrep 2016/2016_*| cut -f 3 |uniq -c | sort -k 1 | uniq > classment_2016.txt
+  616  cat locations.txt | egrep 2017/2017_*| cut -f 3 |uniq -c | sort -k 1 | uniq > classment_2017.txt
+  617  cat locations.txt | egrep 2018/2018_*| cut -f 3 |uniq -c | sort -k 1 | uniq > classment_2018.txt
