@@ -20,7 +20,9 @@
 - `:w` pour écrire
 - `:q` pour sortir de vim
 
-# Séance 3 : (exos git more)
+
+
+### Séance 3 : (exos git more)
 "Cette ligne doit rester après correction."
 
 Exercice 2b : pour récupérer l'id SHA d'un commit, j'ai utilisé la commande `git log`. Ensuite pour défaire un commi
@@ -33,3 +35,14 @@ Correction d'erreurs.
 =======
 Cette ligne servire pour plus tard.
 >>>>>>> Stashed changes
+
+Exercice 4b : 
+- `git status` et `git log` pour voir les différents commits.
+- `git pull` et donne un message d'erreur "commit les changements ou stash avant de pull"
+- `git stash push -m "blablabla"` pour enregistrer le changements dans un stash.
+- `git stash list` qui affiche la list des différents stash et dans ce cas il indique : "stash@{0}: on main: "blablabla""
+- `git pull` pour récupérer les changements du dépot en ligne; puis `git stash apply` pour appliquer le stash; et `git stash drop` pour supprimer le stash.
+- Ensuite pour envoyer vers le dépot en ligne : `git add journal.md` , `git commit -m "blablabla"`, `git push origin main` et `git status` pour vérifier si tout va bien.
+
+
+
