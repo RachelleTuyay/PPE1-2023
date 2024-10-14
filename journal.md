@@ -17,3 +17,5 @@
 - `esc` pour sortir du mode Insertion
 - `:w` pour écrire
 - `:q` pour sortir de vim
+
+# Séance 3 : (exos git more)
