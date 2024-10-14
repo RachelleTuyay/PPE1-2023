@@ -28,4 +28,8 @@ t j'ai utilisé `git reset --soft <SHA>` et on peut constater que le dernier com
  supprimé. De ce que j'ai compris : on a juste fait un pas en arrière dans la branche. Mais ça peut impliquer des co
 nflits ou le fait qu'on est plus dans "main" (le mode tête détaché)
 
+<<<<<<< Updated upstream
 Correction d'erreurs.
+=======
+Cette ligne servire pour plus tard.
+>>>>>>> Stashed changes
