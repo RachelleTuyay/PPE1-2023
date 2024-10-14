@@ -22,3 +22,8 @@
 
 # Séance 3 : (exos git more)
 "Cette ligne doit rester après correction."
+
+Exercide 2.b : (SHA du commit I AM ERROR : 93c2b9bbe1e241b7f02f759f576ac3a8f5eee02f) on peut le récupérer avec un `git log`.
+J'ai utilisé `git reset --soft <commitSHA>` et on peut constater en refaisant un `git log` que le derner commit n'apparait plus.
+
+
