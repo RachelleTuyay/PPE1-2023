@@ -21,3 +21,4 @@
 - `:q` pour sortir de vim
 
 # Séance 3 : (exos git more)
+"Cette ligne doit rester après correction."
