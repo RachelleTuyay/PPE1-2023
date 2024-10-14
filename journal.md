@@ -1,5 +1,7 @@
 # Journal de bord du projet encadré.
 
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum, turpis eget tempor eleifend, tortor sem scelerisque dui, in bibendum velit massa nec massa. Nam posuere tellus efficitur metus pulvinar, ac commodo lacus vehicula. Ut et dolor a eros suscipit maximus. Sed tortor mi, ullamcorper aliquet mollis eget, sodales eu."
+
 ## Commandes git : 
 
 - J'ai clôner mon dépot avec la commande : `git clone git@github.com:RachelleTuyay/PPE1-2023.git`
