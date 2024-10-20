@@ -17,8 +17,7 @@
 
 - `i` pour le mode Insertion
 - `esc` pour sortir du mode Insertion
-- `:w` pour écrire
-- `:q` pour sortir de vim
+- `:w` pour écrire et `:q` pour sortir de vim ; sinon `:wq` pour les 2 en même temps.
 
 
 
@@ -28,13 +27,7 @@
 Exercice 2b : pour récupérer l'id SHA d'un commit, j'ai utilisé la commande `git log`. Ensuite pour défaire un commi
 t j'ai utilisé `git reset --soft <SHA>` et on peut constater que le dernier commit n'apparait plus mais il n'est pas
  supprimé. De ce que j'ai compris : on a juste fait un pas en arrière dans la branche. Mais ça peut impliquer des co
-nflits ou le fait qu'on est plus dans "main" (le mode tête détaché)
-
-<<<<<<< Updated upstream
-Correction d'erreurs.
-=======
-Cette ligne servire pour plus tard.
->>>>>>> Stashed changes
+nflits ou le fait qu'on est plus dans "main" (le mode tête détaché).
 
 Exercice 4b : 
 - `git status` et `git log` pour voir les différents commits.
@@ -44,5 +37,18 @@ Exercice 4b :
 - `git pull` pour récupérer les changements du dépot en ligne; puis `git stash apply` pour appliquer le stash; et `git stash drop` pour supprimer le stash.
 - Ensuite pour envoyer vers le dépot en ligne : `git add journal.md` , `git commit -m "blablabla"`, `git push origin main` et `git status` pour vérifier si tout va bien.
 
+
+
+### Séance 4 : 
+Exercice 4 : dans comptes.sh j'ai utilisé une boucle while en l'incrémentant avec `((i++))`.
+
+Exemple : lire et expliquer : 
+- l.1 : shebang `#!/usr/bin/bash`
+- La première boucle `if` vérifie si il y bien un argument. 
+- Il déclare 3 variables : `FICHIER_URLS` comme étant un argument ($1) ; `OK` et `NOK` qui ont une valeure de 0, car c'est des compteurs pour la suite du programme.
+- Le script lit un fichier avec `read -r LINE` et vérifie si chaque ligne ressemble à une url valide (http:// ou https://)
+Tant que `$LINE` commence par "https?://" ; alors on incrémente `$OK + 1` si seulement si la ligne ressemble à une URL valide et sinon, on incrémente `NOK + 1`.
+- Avec cette boucle `while` : il comptes les urls valides et le reste qui est considérer comme pas urls. Puis il affiche les résultats.
+- A la fin du programme, il affiche les résultats avec `echo "$OK URLs et $NOK lignes douteuses"`
 
 
