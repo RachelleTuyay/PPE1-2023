@@ -14,3 +14,17 @@ do
     cat $i/*.ann | wc -l
     ((i++)) #incrémentation
 done
+
+
+#version sans la boucle while et vérification des arguments : 
+a=2016
+echo "Annotations pour" $a ":"
+cat $a/*.ann | wc -l
+
+b=2017
+echo "Annotations pour" $b ":"
+cat $b/*.ann | wc -l
+
+c=2018
+echo "Annotations pour" $c ":"
+cat $c/*.ann | wc -l
