@@ -21,6 +21,8 @@
 
 
 
+
+
 ### Séance 3 : (exos git more)
 "Cette ligne doit rester après correction."
 
@@ -39,6 +41,8 @@ Exercice 4b :
 
 
 
+
+
 ### Séance 4 : 
 Exercice 4 : dans comptes.sh j'ai utilisé une boucle while en l'incrémentant avec `((i++))`.
 
@@ -52,3 +56,16 @@ Tant que `$LINE` commence par "https?://" ; alors on incrémente `$OK + 1` si se
 - A la fin du programme, il affiche les résultats avec `echo "$OK URLs et $NOK lignes douteuses"`
 
 
+
+
+
+
+### Séance 7 : 
+
+Exercice 1 :
+
+1) On ne peut pas utiliser "cat", car elle nous permet de créer, de fusionner ou d'afficher des fichiers dans l’écran de résultat standard ou vers un autre fichier. Alors que ici, on veut juste lire son contenu sans forcément nous l'afficher, donc read est plus adéquate.
+
+2 et 3) Comme écrit dans la diapo "00-unix.pdf" (la dernière diapo) voir aussi "Séance 4" qui explique ce code. Je l'ai copié collé après la première vérification.
+
+A la fin du script j'ai ajouté : `nl -s $'\t' $FICHIER_URLS > tableaux/tableau-fr.tsv`, `nl` permet d'ajouter les numéros de ligne et de les séparer avec un tabulation `\t` suivi de l'url.
