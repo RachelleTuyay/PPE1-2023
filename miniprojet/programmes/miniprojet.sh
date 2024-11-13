@@ -1,31 +1,25 @@
 #!/usr/bin/env bash
-#Exo 2 et 3 :
 
-
-#vérif 1
 if [ $# -ne 1 ]
 then
-    echo " ce programme demande un argument "
+    echo " ce programme demande un argument."
     exit 1
 fi
 
 FICHIER_URLS=$1
-OK=0
-NOK=0
+line_nb=1
 
 while read -r LINE ;
 do
-    echo "Ligne : $LINE "
-    if [[ $LINE=~^https?:// ]]
-    then
-        echo " ressemble à une URL valide "
-	OK=$((OK + 1))
-    else
-        echo " ne ressemble pas à une URL valide "
-	NOK=$((NOK + 1))
-    fi
+    http="footbar"
+    http_code=$(curl -sILw "%{http_code}" -o /dev/null $line)
+    encoding=$(curl -sILw "%{content_type}" -o /dev/null $line | grep -Po "charset=\S+")
+
+    encoding=$[encoding:-"N/A"]
+
+    nb_mots=$(lynx -dump -nolist $line | wc -w)
+    
+    echo  -e "$line_nb\t$LINE\t$encoding\t$nb_mots"
+    line_nb=$(expr $line_nb + 1)
+    
 done < $FICHIER_URLS
-
-nl -s $'\t' $FICHIER_URLS > ../tableaux/tableau-fr.tsv
-
-
