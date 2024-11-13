@@ -23,3 +23,5 @@ do
     line_nb=$(expr $line_nb + 1)
     
 done < $FICHIER_URLS
+
+$FICHIER_URLS > ../tableaux/tableaux-fr.tsv
