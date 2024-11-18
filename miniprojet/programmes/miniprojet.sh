@@ -9,6 +9,7 @@ fi
 FICHIER_URLS=$1
 line_nb=1
 
+
 while read -r line
 do
     code=$(curl -s -I -L -w "%{http_code}" -o /dev/null $line)
@@ -18,10 +19,7 @@ do
 
     nb_mots=$(lynx -dump -nolist $line | wc -w)
     
-    echo -e "$line_nb\t$line\t$code\t$encoding\t$nb_mots"
+    echo -e "<tr>\n<td>$line_nb</td>\t<td>$line</td>\t<td>$code</td>\t<td>$encoding</td>\t<td>$nb_mots</td>\n</tr>"
     line_nb=$((line_nb+1))
     
-done < $FICHIER_URLS
-
-$FICHIER_URLS > ../tableaux/tableau-fr.tsv
-
+done < $FICHIER_URLS > tableau-fr.html
