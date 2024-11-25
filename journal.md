@@ -69,3 +69,23 @@ Exercice 1 :
 2 et 3) Comme écrit dans la diapo "00-unix.pdf" (la dernière diapo) voir aussi "Séance 4" qui explique ce code. Je l'ai copié collé après la première vérification.
 
 A la fin du script j'ai ajouté : `nl -s $'\t' $FICHIER_URLS > tableaux/tableau-fr.tsv`, `nl` permet d'ajouter les numéros de ligne et de les séparer avec un tabulation `\t` suivi de l'url.
+
+
+
+
+
+### HTML et CSS :
+- HTML : langage de balisage, qui permet de créer un site web. 
+- <a href"..."> </a> : pour ajouter des liens ou hyperliens
+- <p></p> :  pour un paragraphe
+- <h1></h1> : pour des entêtes en fonction du niveau (jusqu'à 6 max)
+- <ul> pour des listes à points et <ol> pour des listes numérotées.
+- attribut class : <p class="text-red"></p> = les classes permettents de regrouper des éléments afin de faciliter l'application du style/ou requêter facilement.
+
+
+- CSS = modifie le style des éléments d'une page HTML
+- <p style="color:red"></p> : possible d'inclure du CSS dans les balises concernées.
+- Possible d'insérer du CSS dans la même page HTML (dans le <head></head>)
+- Possible d'insérer du CSS avec un fichier .css externe.
+
+
