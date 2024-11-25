@@ -10,13 +10,24 @@ FICHIER_URLS=$1
 line_nb=1
 
 echo "<html>"
-echo "<head>
+echo "	<head>
 		<meta charset=\"UTF-8\">
-</head>"
+		<title>Miniprojet HTML</title>
+		<meta name=\"viewport\" content\"width=device-width, initial-scale=1\">
+		<link href=\"https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css\" rel=\"stylesheet\">
+	</head>"
 
-echo "<body>"
-echo "<table>"
-echo "<tr> <th>Lignes</th><th>Urls</th>Code<th>Encodage</th><th>Mots</th> </tr>"
+echo "	<body>"
+echo "<div class="table-container">
+  <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">"
+
+echo "<tr>
+	<th>Lignes</th>
+	<th>Urls</th>
+	<th>Code</th>
+	<th>Encodage</th>
+	<th>Mots</th>
+</tr>"
 
 while read -r line
 do
@@ -33,5 +44,6 @@ do
 done < $FICHIER_URLS
 
 echo "</table>"
+echo "</div>"
 echo "</body>"
 echo "</html>"
